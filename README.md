@@ -62,8 +62,7 @@ Kovai, IN:Non existent data given, please check if the State and City are correc
      brew install python
      ```
   https://docs.brew.sh/Homebrew-and-Python
-  Visit the above link to get exact steps on installing python 3.11
-
+Visit the above link to get exact steps on installing python 3.11
 ## Installation
 
 1. **Create a Virtual Environment**:
