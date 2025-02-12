@@ -1,0 +1,123 @@
+2025-02-11 22:23:44 | INFO  | pytest_runtest_logstart                      :10    | ---------------------------------------------------------------------------------------------------
+2025-02-11 22:23:44 | INFO  | pytest_runtest_logstart                      :11    | Starting the test: TestGeoLoc.test_geo_loc_with_state
+2025-02-11 22:23:44 | INFO  | test_geo_loc_with_state                      :13    | Testing geoloc-util with City and State
+2025-02-11 22:23:44 | DEBUG | get_geoloc_from_state_and_city               :12    | Input Atlanta has more than 2 chars,GA is exactly 2 chars
+2025-02-11 22:23:44 | DEBUG | get_request_with_auth_token                  :55    | GET -> http://api.openweathermap.org/geo/1.0/ + direct?q=Atlanta,GA,US + &appid=f897a99d971b5eef57be6fafa0d83239
+2025-02-11 22:23:44 | DEBUG | _new_conn                                    :241   | Starting new HTTP connection (1): api.openweathermap.org:80
+2025-02-11 22:23:44 | DEBUG | _make_request                                :544   | http://api.openweathermap.org:80 "GET /geo/1.0/direct?q=Atlanta,GA,US&appid=f897a99d971b5eef57be6fafa0d83239 HTTP/1.1" 200 1085
+2025-02-11 22:23:44 | DEBUG | get_request_with_auth_token                  :59    | Response received - len: 1
+2025-02-11 22:23:44 | DEBUG | test_geo_loc_with_state                      :15    | Geoloc-util [CityStateLocationInfo(name='Atlanta', local_names={'be': 'Атланта', 'ru': 'Атланта', 'sr': 'Атланта', 'ka': 'ატლანტა', 'bg': 'Атланта', 'kw': 'Atlanta', 'fa': 'آتلانتا', 'kn': 'ಅಟ್ಲಾಂಟಾ, ಜಾರ್ಜಿಯಾ', 'oc': 'Atlanta', 'os': 'Атлантæ', 'th': 'แอตแลนตา', 'zh': '亚特兰大/亞特蘭大', 'hy': 'Ատլանտա', 'lt': 'Atlanta', 'bo': 'ཨ་ཊི་ལཱན་ཊཱ།', 'yi': 'אטלאנטא', 'te': 'అట్లాంటా', 'ur': 'اٹلانٹا، جارجیا', 'el': 'Ατλάντα', 'en': 'Atlanta', 'gu': 'એટલાન્ટા, જ્યોર્જિયા', 'mr': 'अटलांटा', 'ta': 'அட்லான்டா', 'ar': 'أتلانتا، جورجيا', 'ja': 'アトランタ', 'ko': '애틀랜타', 'ml': 'അറ്റ്ലാന്റാ നഗരം', 'ce': 'Атланта', 'la': 'Atlanta', 'uk': 'Атланта', 'pl': 'Atlanta', 'he': 'אטלנטה', 'my': 'အတ္တလန္တာမြို့', 'eo': 'Atlanta', 'mk': 'Атланта', 'ht': 'Atlanta'}, lat=33.7489924, lon=-84.3902644, country='US', state='Georgia')]
+2025-02-11 22:23:44 | INFO  | test_geo_loc_with_state                      :16    | Testing with state
+2025-02-11 22:23:44 | DEBUG | test_geo_loc_with_state                      :17    | Checking if error message is returned, it should not
+2025-02-11 22:23:44 | DEBUG | assert_and_print_values                      :7     | Checking city name Atlanta
+2025-02-11 22:23:44 | DEBUG | assert_and_print_values                      :9     | Checking country is US
+2025-02-11 22:23:44 | DEBUG | assert_and_print_values                      :11    | Checking lat is 33.7489924
+2025-02-11 22:23:44 | DEBUG | assert_and_print_values                      :13    | Checking lon is -84.3902644
+2025-02-11 22:23:44 | INFO  | pytest_report_teststatus                     :23    | Test Status: passed
+2025-02-11 22:23:44 | INFO  | pytest_runtest_logfinish                     :16    | Completed the test: TestGeoLoc.test_geo_loc_with_state
+2025-02-11 22:23:44 | INFO  | pytest_runtest_logfinish                     :17    | ---------------------------------------------------------------------------------------------------
+2025-02-11 22:23:44 | INFO  | pytest_runtest_logstart                      :10    | ---------------------------------------------------------------------------------------------------
+2025-02-11 22:23:44 | INFO  | pytest_runtest_logstart                      :11    | Starting the test: TestGeoLoc.test_geo_loc_with_zip
+2025-02-11 22:23:44 | INFO  | test_geo_loc_with_zip                        :22    | Testing geoloc-util with Zip
+2025-02-11 22:23:44 | DEBUG | get_geoloc_from_zip_code                     :28    | Input 01801 is exactly 5 chars
+2025-02-11 22:23:44 | DEBUG | get_request_with_auth_token                  :55    | GET -> http://api.openweathermap.org/geo/1.0/ + zip?zip=01801,US + &appid=f897a99d971b5eef57be6fafa0d83239
+2025-02-11 22:23:44 | DEBUG | _new_conn                                    :241   | Starting new HTTP connection (1): api.openweathermap.org:80
+2025-02-11 22:23:44 | DEBUG | _make_request                                :544   | http://api.openweathermap.org:80 "GET /geo/1.0/zip?zip=01801,US&appid=f897a99d971b5eef57be6fafa0d83239 HTTP/1.1" 200 75
+2025-02-11 22:23:44 | DEBUG | get_request_with_auth_token                  :66    | Response received: name='Woburn' lat=42.4829 lon=-71.1574 country='US' zip='01801'
+2025-02-11 22:23:44 | DEBUG | test_geo_loc_with_zip                        :24    | Geoloc-util [ZipLocationInfo(name='Woburn', lat=42.4829, lon=-71.1574, country='US', zip='01801')]
+2025-02-11 22:23:44 | DEBUG | assert_and_print_values                      :7     | Checking city name Woburn
+2025-02-11 22:23:44 | DEBUG | assert_and_print_values                      :9     | Checking country is US
+2025-02-11 22:23:44 | DEBUG | assert_and_print_values                      :11    | Checking lat is 42.4829
+2025-02-11 22:23:44 | DEBUG | assert_and_print_values                      :13    | Checking lon is -71.1574
+2025-02-11 22:23:44 | INFO  | pytest_report_teststatus                     :23    | Test Status: passed
+2025-02-11 22:23:44 | INFO  | pytest_runtest_logfinish                     :16    | Completed the test: TestGeoLoc.test_geo_loc_with_zip
+2025-02-11 22:23:44 | INFO  | pytest_runtest_logfinish                     :17    | ---------------------------------------------------------------------------------------------------
+2025-02-11 22:23:44 | INFO  | pytest_runtest_logstart                      :10    | ---------------------------------------------------------------------------------------------------
+2025-02-11 22:23:44 | INFO  | pytest_runtest_logstart                      :11    | Starting the test: TestGeoLoc.test_geo_loc_with_invalid_zip
+2025-02-11 22:23:44 | WARNING | get_geoloc_from_zip_code                     :31    | Input 000 is NOT 5 chars
+2025-02-11 22:23:44 | WARNING | get_geoloc_from_zip_code                     :32    | Given input params cannot be used for api call, returning error dict
+2025-02-11 22:23:44 | INFO  | pytest_report_teststatus                     :23    | Test Status: passed
+2025-02-11 22:23:44 | INFO  | pytest_runtest_logfinish                     :16    | Completed the test: TestGeoLoc.test_geo_loc_with_invalid_zip
+2025-02-11 22:23:44 | INFO  | pytest_runtest_logfinish                     :17    | ---------------------------------------------------------------------------------------------------
+2025-02-11 22:23:44 | INFO  | pytest_runtest_logstart                      :10    | ---------------------------------------------------------------------------------------------------
+2025-02-11 22:23:44 | INFO  | pytest_runtest_logstart                      :11    | Starting the test: TestGeoLoc.test_geo_loc_with_invalid_zip2
+2025-02-11 22:23:44 | DEBUG | get_geoloc_from_zip_code                     :28    | Input 11111 is exactly 5 chars
+2025-02-11 22:23:44 | DEBUG | get_request_with_auth_token                  :55    | GET -> http://api.openweathermap.org/geo/1.0/ + zip?zip=11111,US + &appid=f897a99d971b5eef57be6fafa0d83239
+2025-02-11 22:23:44 | DEBUG | _new_conn                                    :241   | Starting new HTTP connection (1): api.openweathermap.org:80
+2025-02-11 22:23:44 | DEBUG | _make_request                                :544   | http://api.openweathermap.org:80 "GET /geo/1.0/zip?zip=11111,US&appid=f897a99d971b5eef57be6fafa0d83239 HTTP/1.1" 404 35
+2025-02-11 22:23:44 | DEBUG | _make_request                                :44    | Content-Type is not application/json or response code is not 200
+2025-02-11 22:23:44 | WARNING | get_geoloc_from_zip_code                     :36    | Given input params to api, returned empty, returning error dict
+2025-02-11 22:23:44 | INFO  | pytest_report_teststatus                     :23    | Test Status: passed
+2025-02-11 22:23:44 | INFO  | pytest_runtest_logfinish                     :16    | Completed the test: TestGeoLoc.test_geo_loc_with_invalid_zip2
+2025-02-11 22:23:44 | INFO  | pytest_runtest_logfinish                     :17    | ---------------------------------------------------------------------------------------------------
+2025-02-11 22:23:44 | INFO  | pytest_runtest_logstart                      :10    | ---------------------------------------------------------------------------------------------------
+2025-02-11 22:23:44 | INFO  | pytest_runtest_logstart                      :11    | Starting the test: TestGeoLoc.test_geo_loc_with_invalid_city
+2025-02-11 22:23:44 | DEBUG | get_geoloc_from_state_and_city               :12    | Input WWWburn has more than 2 chars,MA is exactly 2 chars
+2025-02-11 22:23:44 | DEBUG | get_request_with_auth_token                  :55    | GET -> http://api.openweathermap.org/geo/1.0/ + direct?q=WWWburn,MA,US + &appid=f897a99d971b5eef57be6fafa0d83239
+2025-02-11 22:23:44 | DEBUG | _new_conn                                    :241   | Starting new HTTP connection (1): api.openweathermap.org:80
+2025-02-11 22:23:44 | DEBUG | _make_request                                :544   | http://api.openweathermap.org:80 "GET /geo/1.0/direct?q=WWWburn,MA,US&appid=f897a99d971b5eef57be6fafa0d83239 HTTP/1.1" 200 2
+2025-02-11 22:23:44 | DEBUG | get_request_with_auth_token                  :59    | Response received - len: 0
+2025-02-11 22:23:44 | WARNING | get_geoloc_from_state_and_city               :20    | Given input params to api, returned empty, returning error dict
+2025-02-11 22:23:44 | INFO  | pytest_report_teststatus                     :23    | Test Status: passed
+2025-02-11 22:23:44 | INFO  | pytest_runtest_logfinish                     :16    | Completed the test: TestGeoLoc.test_geo_loc_with_invalid_city
+2025-02-11 22:23:44 | INFO  | pytest_runtest_logfinish                     :17    | ---------------------------------------------------------------------------------------------------
+2025-02-11 22:23:44 | INFO  | pytest_runtest_logstart                      :10    | ---------------------------------------------------------------------------------------------------
+2025-02-11 22:23:44 | INFO  | pytest_runtest_logstart                      :11    | Starting the test: TestGeoLoc.test_geo_loc_with_invalid_state
+2025-02-11 22:23:44 | DEBUG | get_geoloc_from_state_and_city               :12    | Input Boston has more than 2 chars,DD is exactly 2 chars
+2025-02-11 22:23:44 | DEBUG | get_request_with_auth_token                  :55    | GET -> http://api.openweathermap.org/geo/1.0/ + direct?q=Boston,DD,US + &appid=f897a99d971b5eef57be6fafa0d83239
+2025-02-11 22:23:44 | DEBUG | _new_conn                                    :241   | Starting new HTTP connection (1): api.openweathermap.org:80
+2025-02-11 22:23:44 | DEBUG | _make_request                                :544   | http://api.openweathermap.org:80 "GET /geo/1.0/direct?q=Boston,DD,US&appid=f897a99d971b5eef57be6fafa0d83239 HTTP/1.1" 200 2
+2025-02-11 22:23:44 | DEBUG | get_request_with_auth_token                  :59    | Response received - len: 0
+2025-02-11 22:23:44 | WARNING | get_geoloc_from_state_and_city               :20    | Given input params to api, returned empty, returning error dict
+2025-02-11 22:23:44 | INFO  | pytest_report_teststatus                     :23    | Test Status: passed
+2025-02-11 22:23:44 | INFO  | pytest_runtest_logfinish                     :16    | Completed the test: TestGeoLoc.test_geo_loc_with_invalid_state
+2025-02-11 22:23:44 | INFO  | pytest_runtest_logfinish                     :17    | ---------------------------------------------------------------------------------------------------
+2025-02-11 22:23:44 | INFO  | pytest_runtest_logstart                      :10    | ---------------------------------------------------------------------------------------------------
+2025-02-11 22:23:44 | INFO  | pytest_runtest_logstart                      :11    | Starting the test: TestGeoLoc.test_geo_loc_with_extra_spaces_city_state
+2025-02-11 22:23:44 | DEBUG | get_geoloc_from_state_and_city               :12    | Input Boston has more than 2 chars,MA is exactly 2 chars
+2025-02-11 22:23:44 | DEBUG | get_request_with_auth_token                  :55    | GET -> http://api.openweathermap.org/geo/1.0/ + direct?q=Boston,MA,US + &appid=f897a99d971b5eef57be6fafa0d83239
+2025-02-11 22:23:44 | DEBUG | _new_conn                                    :241   | Starting new HTTP connection (1): api.openweathermap.org:80
+2025-02-11 22:23:44 | DEBUG | _make_request                                :544   | http://api.openweathermap.org:80 "GET /geo/1.0/direct?q=Boston,MA,US&appid=f897a99d971b5eef57be6fafa0d83239 HTTP/1.1" 200 553
+2025-02-11 22:23:44 | DEBUG | get_request_with_auth_token                  :59    | Response received - len: 1
+2025-02-11 22:23:44 | DEBUG | assert_and_print_values                      :7     | Checking city name Boston
+2025-02-11 22:23:44 | DEBUG | assert_and_print_values                      :9     | Checking country is US
+2025-02-11 22:23:44 | DEBUG | assert_and_print_values                      :11    | Checking lat is 42.3554334
+2025-02-11 22:23:44 | DEBUG | assert_and_print_values                      :13    | Checking lon is -71.060511
+2025-02-11 22:23:44 | INFO  | pytest_report_teststatus                     :23    | Test Status: passed
+2025-02-11 22:23:44 | INFO  | pytest_runtest_logfinish                     :16    | Completed the test: TestGeoLoc.test_geo_loc_with_extra_spaces_city_state
+2025-02-11 22:23:44 | INFO  | pytest_runtest_logfinish                     :17    | ---------------------------------------------------------------------------------------------------
+2025-02-11 22:23:44 | INFO  | pytest_runtest_logstart                      :10    | ---------------------------------------------------------------------------------------------------
+2025-02-11 22:23:44 | INFO  | pytest_runtest_logstart                      :11    | Starting the test: TestGeoLoc.test_geo_loc_with_extra_spaces_zip
+2025-02-11 22:23:44 | DEBUG | get_geoloc_from_zip_code                     :28    | Input 01810 is exactly 5 chars
+2025-02-11 22:23:44 | DEBUG | get_request_with_auth_token                  :55    | GET -> http://api.openweathermap.org/geo/1.0/ + zip?zip=01810,US + &appid=f897a99d971b5eef57be6fafa0d83239
+2025-02-11 22:23:44 | DEBUG | _new_conn                                    :241   | Starting new HTTP connection (1): api.openweathermap.org:80
+2025-02-11 22:23:45 | DEBUG | _make_request                                :544   | http://api.openweathermap.org:80 "GET /geo/1.0/zip?zip=01810,US&appid=f897a99d971b5eef57be6fafa0d83239 HTTP/1.1" 200 76
+2025-02-11 22:23:45 | DEBUG | get_request_with_auth_token                  :66    | Response received: name='Andover' lat=42.6496 lon=-71.1565 country='US' zip='01810'
+2025-02-11 22:23:45 | DEBUG | assert_and_print_values                      :7     | Checking city name Andover
+2025-02-11 22:23:45 | DEBUG | assert_and_print_values                      :9     | Checking country is US
+2025-02-11 22:23:45 | DEBUG | assert_and_print_values                      :11    | Checking lat is 42.6496
+2025-02-11 22:23:45 | DEBUG | assert_and_print_values                      :13    | Checking lon is -71.1565
+2025-02-11 22:23:45 | INFO  | pytest_report_teststatus                     :23    | Test Status: passed
+2025-02-11 22:23:45 | INFO  | pytest_runtest_logfinish                     :16    | Completed the test: TestGeoLoc.test_geo_loc_with_extra_spaces_zip
+2025-02-11 22:23:45 | INFO  | pytest_runtest_logfinish                     :17    | ---------------------------------------------------------------------------------------------------
+2025-02-11 22:23:45 | INFO  | pytest_runtest_logstart                      :10    | ---------------------------------------------------------------------------------------------------
+2025-02-11 22:23:45 | INFO  | pytest_runtest_logstart                      :11    | Starting the test: TestGeoLoc.test_geo_loc_with_empty_city_state
+2025-02-11 22:23:45 | DEBUG | get_geoloc_from_state_and_city               :15    | Input  has less than 2 chars, is not equal 2 chars
+2025-02-11 22:23:45 | WARNING | get_geoloc_from_state_and_city               :16    | Given input params cannot be used for api call, returning error dict
+2025-02-11 22:23:45 | INFO  | pytest_report_teststatus                     :23    | Test Status: passed
+2025-02-11 22:23:45 | INFO  | pytest_runtest_logfinish                     :16    | Completed the test: TestGeoLoc.test_geo_loc_with_empty_city_state
+2025-02-11 22:23:45 | INFO  | pytest_runtest_logfinish                     :17    | ---------------------------------------------------------------------------------------------------
+2025-02-11 22:23:45 | INFO  | pytest_runtest_logstart                      :10    | ---------------------------------------------------------------------------------------------------
+2025-02-11 22:23:45 | INFO  | pytest_runtest_logstart                      :11    | Starting the test: TestGeoLoc.test_geo_loc_with_empty_zip
+2025-02-11 22:23:45 | WARNING | get_geoloc_from_zip_code                     :31    | Input  is NOT 5 chars
+2025-02-11 22:23:45 | WARNING | get_geoloc_from_zip_code                     :32    | Given input params cannot be used for api call, returning error dict
+2025-02-11 22:23:45 | INFO  | pytest_report_teststatus                     :23    | Test Status: passed
+2025-02-11 22:23:45 | INFO  | pytest_runtest_logfinish                     :16    | Completed the test: TestGeoLoc.test_geo_loc_with_empty_zip
+2025-02-11 22:23:45 | INFO  | pytest_runtest_logfinish                     :17    | ---------------------------------------------------------------------------------------------------
+2025-02-11 22:23:45 | INFO  | pytest_runtest_logstart                      :10    | ---------------------------------------------------------------------------------------------------
+2025-02-11 22:23:45 | INFO  | pytest_runtest_logstart                      :11    | Starting the test: TestGeoLoc.test_geo_loc_with_empty_zip2
+2025-02-11 22:23:45 | WARNING | get_geoloc_from_zip_code                     :31    | Input  is NOT 5 chars
+2025-02-11 22:23:45 | WARNING | get_geoloc_from_zip_code                     :32    | Given input params cannot be used for api call, returning error dict
+2025-02-11 22:23:45 | INFO  | pytest_report_teststatus                     :23    | Test Status: passed
+2025-02-11 22:23:45 | INFO  | pytest_runtest_logfinish                     :16    | Completed the test: TestGeoLoc.test_geo_loc_with_empty_zip2
+2025-02-11 22:23:45 | INFO  | pytest_runtest_logfinish                     :17    | ---------------------------------------------------------------------------------------------------
