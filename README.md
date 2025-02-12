@@ -1,0 +1,89 @@
+# Project Title
+
+**CLI Project Name**: [Your Project Name]
+
+## Description
+
+Brief description about the repo, project, design style and to-do for the rest of the project
+
+## Table of Contents
+
+1. [Prerequisites](#prerequisites)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Running Tests](#running-tests)
+5. [Features](#features)
+6. [Contribution](#contribution)
+7. [License](#license)
+
+## Prerequisites
+
+- **Python Version**: This project requires Python 3.11 or higher. 
+- **Package Manager**: Ensure you have `pip` installed, which comes with Python.
+
+### Installing Python
+
+
+1. **For macOS**:
+   - You can install Python using Homebrew. Open a terminal and run:
+     ```bash
+     brew install python
+     ```
+  https://docs.brew.sh/Homebrew-and-Python
+  Visit the above link to get exact steps on installing python 3.11
+
+## Installation
+
+1. **Create a Virtual Environment**:
+   It is recommended to create a virtual environment to manage dependencies. Run the following commands:
+
+   ```bash
+   # Navigate to your project directory
+   cd /path/to/your/project
+
+   # Create a virtual environment
+   python3 -m venv venv
+
+   # On macOS/Linux
+   source venv/bin/activate
+   
+   https://www.jetbrains.com/help/pycharm/creating-virtual-environment.html
+
+2. **Install Poetry**:
+   Once pip is installed, then run pip install poetry to from within the virtual environment
+   From pycharm terminal, run the command 'poetry --version' to see the Poetry version
+   It's important the poetry is installed as it would take care of all the necessary dependencies for this project
+3. **Poetry build**:
+   Now run the command 'pip list' to see if any dependencies are installed by default
+   Next run the command 'poetry build' and this would take a few minutes for the very first time to install all the dependencies listed in the pyproject.toml file
+   Once again run 'pip list' command to see if bunch of additional libraries are installed like:
+     - pydantic
+     - pytest
+     - requests
+     - typing_extensions
+  
+   These are just a few to list, depending on what other libraries are installed by default you might see additional 8-10 more
+       
+
+## Usage
+  pip install geoloc-util
+  this should install the geoloc-util to the machine and run the below command to see the output in the console.
+
+  geoloc-util --locations "Boston, MA"
+
+## Running tests:
+  This repository is built with pytest and the packages are managed with poetry. Once the necessary dependencies are installed you can run the tests either by
+  selecting each tests in the test class or run them as a suite by below command.
+
+## Featurs
+  Reusability: Build with multiple design principles in mind, like reusability to having methods that makes api calls for various endpoints.
+  Logs: source logs separate from test logs, however logger functionality is maintained at a common place
+  Readability: Logs are easily readable and the methods and classes follow the same
+  Pydantic: To validate the json response for field input and type is implemented for both city and zip code response
+  Mock Integration: Verifying the integration of the cli by creating mock response and checking for validity
+
+## Contribution
+  Fully written and developed by Swami Padmanabhan
+
+## License
+  MIT license is used
