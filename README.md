@@ -68,18 +68,30 @@ Brief description about the repo, project, design style and to-do for the rest o
 ## Usage
   pip install geoloc-util
   this should install the geoloc-util to the machine and run the below command to see the output in the console.
-
+```
   geoloc-util --locations "Boston, MA"
-
+```
 ## Running tests:
-  This repository is built with pytest and the packages are managed with poetry. Once the necessary dependencies are installed you can run the tests either by
-  selecting each tests in the test class or run them as a suite by below command.
+  This repository is built with pytest and the packages are managed with poetry. Once the necessary dependencies are installed you can run the tests either by selecting each tests in the test class or run them as a suite by below command.
 
-## Featurs
-  Reusability: Build with multiple design principles in mind, like reusability to having methods that makes api calls for various endpoints.
-  Logs: source logs separate from test logs, however logger functionality is maintained at a common place
-  Readability: Logs are easily readable and the methods and classes follow the same
-  Pydantic: To validate the json response for field input and type is implemented for both city and zip code response
+  ```
+   (venv) <machine-name>:geoloc swami.padmanabhan$
+
+```
+Make sure to navigate to the geoloc folder in your local machine
+```
+   pytest -v -s tests/test_geo_loc.py
+  ```
+
+  after running this command, the logs will be created in the Projects/geoloc/logs [check in the main root foler]
+
+  If running the tests, individually from the test class, then the logs will be created within the tests folder
+
+## Features
+  - Reusability: Build with multiple design principles in mind, like reusability to having methods that makes api calls for various endpoints.
+  - Logs: source logs separate from test logs, however logger functionality is maintained at a common place
+  - Readability: Logs are easily readable and the methods and classes follow the same
+  - Pydantic: To validate the json response for field input and type is implemented for both city and zip code response
   Mock Integration: Verifying the integration of the cli by creating mock response and checking for validity
 
 ## Contribution
