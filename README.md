@@ -1,10 +1,42 @@
-# Project Title
+# Geoloc
 
-**CLI Project Name**: [Your Project Name]
+**CLI Project Name**: geoloc
 
 ## Description
 
-Brief description about the repo, project, design style and to-do for the rest of the project
+Based on the user input, city and state or zip, make an api all to get latitude, longitude, country, city, state...etc.
+Input can be a list of strings like below:
+```
+Possible examples:
+● geoloc-util --locations “Madison, WI” “12345”
+● geoloc-util “Madison, WI” “12345” “Chicago, IL” “10001
+```
+
+```
+geoloc-util "01801" "Lincoln, IN" "000" "Kovai, IN" "11111" "13214654" "adf, ad" "a,a", "", "  ", " , "
+```
+For the above input, the cli response is given below. 
+```
+Zip: 01801
+Country: US
+State: Woburn
+Latitude: 42.4829
+Longitude: -71.1574
+----------------------------------------
+City: Lincoln
+Country: US
+State: Indiana
+Latitude: 40.6155947
+Longitude: -86.2099948
+----------------------------------------
+000:Incorrect Zip code
+----------------------------------------
+Kovai, IN:Non existent data given, please check if the State and City are correct Kovai and IN
+----------------------------------------
+11111:Non existent data given, please check if the zip code is correct 11111
+----------------------------------------
+13214654:Incorrect Zip code
+```
 
 ## Table of Contents
 
