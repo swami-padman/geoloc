@@ -1,6 +1,6 @@
 [project]
 name = "geoloc"
-version = "0.1.0"
+version = "0.1.1"
 description = "A CLI tool for geographical location utilities."
 authors = [{name = "swami.padmanabhan",email = "swami.padman@gmail.com"}]
 license = "MIT"
